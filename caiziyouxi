@@ -1,0 +1,39 @@
+package huangyanxiao;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Number {
+
+	public static void main(String[] args) {
+
+		new Number().go(100);
+	}
+	
+	private void go(int i) {
+		// TODO Auto-generated method stub
+
+		Random rd = new Random();
+		int number = rd.nextInt(i);
+		// System.out.println(number);
+		System.out.println("请输入猜的数字");
+		Scanner sc = new Scanner(System.in);
+		int newNumber = sc.nextInt();
+
+		while (true) {
+		if (number < newNumber) {
+
+		    System.out.println("大了,请再次输入:");
+		    newNumber = sc.nextInt();
+
+		} else if (number > newNumber) {
+		    System.out.println("小了,请再次输入");
+		    newNumber = sc.nextInt();
+		} else if (number == newNumber) {
+		    System.out.println("正确");
+		    System.exit(1);
+		}
+        System.out.println("201303014071 计科（高职）13-2 黄彦潇");
+		}
+	}
+}
